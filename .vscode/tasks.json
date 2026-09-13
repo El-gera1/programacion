@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compilar y Ejecutar Ensamblador",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-Command",
+                "& 'C:\\Users\\sarmi\\AppData\\Local\\bin\\NASM\\nasm.exe' -f win64 '${file}' -o '${fileBasenameNoExtension}.obj'; if ($LASTEXITCODE -eq 0) { gcc -fno-lto '${fileBasenameNoExtension}.obj' -o '${fileBasenameNoExtension}.exe' }; if ($LASTEXITCODE -eq 0) { Write-Host '--- EJECUTANDO PROGRAMA ---' -ForegroundColor Green; .\\${fileBasenameNoExtension}.exe; Write-Host \"`nCódigo de salida: $LASTEXITCODE\" -ForegroundColor Cyan }"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
