@@ -20,3 +20,4 @@ main:
 salir:
     movzx rax, byte [resul]
     ret
+    

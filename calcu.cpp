@@ -8,7 +8,7 @@ using namespace std;
 // calculadora
 
 int main() {
-    float n1, n2; // Declarar variables
+    float n1, n2;
     int op;
     
     do {
@@ -72,7 +72,7 @@ int main() {
         }   
 
         
-        if (op != 5) {
+        if (op !=5) {
             system("pause");
         }
 
